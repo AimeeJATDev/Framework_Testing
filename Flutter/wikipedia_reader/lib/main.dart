@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:flutter/foundation.dart';
+import 'package:flutter/foundation.dart' hide Summary;
 import 'package:http/http.dart';
 import 'package:material_ui/material_ui.dart';
 
@@ -25,7 +25,7 @@ class MainApp extends StatelessWidget {
   }
 }
 
-class ArticleModle {
+class ArticleModel {
   Future<Summary> getRandomArticleSummary() async {
     final uri = Uri.https(
       'en.wikipedia.org', 
